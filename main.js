@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       templatesData = data;
       populateProducts();
+      updateCharCount(); // 初始化时也更新一次
     })
     .catch((err) => {
       console.error("Failed to load templates.json", err);
@@ -46,11 +47,9 @@ function attachEventListeners() {
     showReply();
   });
 
-  // ⭐ 在这里加入（放在最后更清晰）
+  // 手动改动内容时，如果以后去掉 readonly，也会更新字符数
   replyText.addEventListener("input", updateCharCount);
-  importFileInput.addEventListener("change", handleImportFile);
-}
-  
+
   copyBtn.addEventListener("click", () => {
     if (!replyText.value) return;
     navigator.clipboard
@@ -128,7 +127,7 @@ function showReply() {
   const sub = getSelectedSubcategory();
   if (!sub) {
     replyText.value = "";
-    updateCharCount(); 
+    updateCharCount();
     return;
   }
 
@@ -142,7 +141,6 @@ function showReply() {
   }
 
   replyText.value = text;
-
   updateCharCount();
 }
 
@@ -161,6 +159,7 @@ function handleImportFile(event) {
     try {
       const importedData = JSON.parse(e.target.result);
       mergeTemplates(importedData);
+      populateProducts();
       alert("Import successful!");
     } catch (err) {
       console.error("JSON parse error:", err);
@@ -242,7 +241,7 @@ function clearSubcategories() {
 
 function clearReply() {
   replyText.value = "";
-  updateCharCount(); 
+  updateCharCount();
 }
 
 function getSelectedProduct() {
@@ -265,4 +264,11 @@ function getSelectedSubcategory() {
   const id = subcategorySelect.value;
   if (!id) return null;
   return (category.subcategories || []).find((s) => s.id === id) || null;
+}
+
+// 计算字符数
+function updateCharCount() {
+  if (!charCountSpan) return;
+  const length = replyText.value.length;
+  charCountSpan.textContent = `Characters: ${length}`;
 }
