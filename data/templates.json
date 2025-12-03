@@ -3,22 +3,17 @@
     {
       "id": "demo_product",
       "name": "Demo Product",
-      "categories": [ ... ]
-    },
-    {
-      "id": "ins3",
-      "name": "Ins3 Story Viewer",
       "categories": [
         {
-          "id": "story_view",
-          "name": "Story Viewing",
+          "id": "demo_category",
+          "name": "Demo Category",
           "subcategories": [
             {
-              "id": "seen_status",
-              "name": "Will the story show as seen?",
+              "id": "demo_subcategory",
+              "name": "Demo Subcategory",
               "reply": {
-                "zh": "不会的，您在我们应用中查看的故事在 Instagram 中不会显示已查看。",
-                "en": "No. Stories you view in our app will NOT be marked as seen on Instagram."
+                "zh": "这是一个测试话术，说明 templates.json 已经成功加载。",
+                "en": "This is a demo reply. templates.json has been loaded successfully."
               }
             }
           ]
