@@ -8,6 +8,7 @@ const replyText = document.getElementById("replyText");
 const copyBtn = document.getElementById("copyBtn");
 const importFileInput = document.getElementById("importFile");
 const fileNameSpan = document.getElementById("fileName");
+const charCountSpan = document.getElementById("charCount");
 
 // 初始化：加载默认 templates.json
 document.addEventListener("DOMContentLoaded", () => {
@@ -45,6 +46,11 @@ function attachEventListeners() {
     showReply();
   });
 
+  // ⭐ 在这里加入（放在最后更清晰）
+  replyText.addEventListener("input", updateCharCount);
+  importFileInput.addEventListener("change", handleImportFile);
+}
+  
   copyBtn.addEventListener("click", () => {
     if (!replyText.value) return;
     navigator.clipboard
@@ -122,14 +128,12 @@ function showReply() {
   const sub = getSelectedSubcategory();
   if (!sub) {
     replyText.value = "";
+    updateCharCount(); 
     return;
   }
 
   const lang = languageSelect.value;
 
-  // 支持两种形式：
-  // 1) reply 是字符串
-  // 2) reply 是 { zh: "...", en: "..." }
   let text = "";
   if (typeof sub.reply === "string") {
     text = sub.reply;
@@ -138,6 +142,8 @@ function showReply() {
   }
 
   replyText.value = text;
+
+  updateCharCount();
 }
 
 // 导入个人 JSON 文件并合并
@@ -148,20 +154,17 @@ function handleImportFile(event) {
     return;
   }
 
-  if (fileNameSpan) {
-    fileNameSpan.textContent = file.name;
-  }
+  fileNameSpan.textContent = file.name;
 
   const reader = new FileReader();
-  reader.onload = (e) => {
+  reader.onload = function (e) {
     try {
-      const imported = JSON.parse(e.target.result);
-      mergeTemplates(imported);
-      populateProducts();
-      alert("Templates imported successfully.");
+      const importedData = JSON.parse(e.target.result);
+      mergeTemplates(importedData);
+      alert("Import successful!");
     } catch (err) {
-      console.error("Failed to parse import JSON", err);
-      alert("Import failed: invalid JSON file.");
+      console.error("JSON parse error:", err);
+      alert("Invalid JSON file. Please check the file format.");
     }
   };
   reader.readAsText(file);
@@ -239,6 +242,7 @@ function clearSubcategories() {
 
 function clearReply() {
   replyText.value = "";
+  updateCharCount(); 
 }
 
 function getSelectedProduct() {
