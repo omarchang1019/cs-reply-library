@@ -7,6 +7,7 @@ const languageSelect = document.getElementById("languageSelect");
 const replyText = document.getElementById("replyText");
 const copyBtn = document.getElementById("copyBtn");
 const importFileInput = document.getElementById("importFile");
+const fileNameSpan = document.getElementById("fileName");
 
 // 初始化：加载默认 templates.json
 document.addEventListener("DOMContentLoaded", () => {
@@ -142,7 +143,14 @@ function showReply() {
 // 导入个人 JSON 文件并合并
 function handleImportFile(event) {
   const file = event.target.files[0];
-  if (!file) return;
+  if (!file) {
+    if (fileNameSpan) fileNameSpan.textContent = "No file chosen";
+    return;
+  }
+
+  if (fileNameSpan) {
+    fileNameSpan.textContent = file.name;
+  }
 
   const reader = new FileReader();
   reader.onload = (e) => {
