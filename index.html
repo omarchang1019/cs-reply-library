@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Customer Support Reply Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>CS Reply Library</h1>
+
+  <section class="controls">
+    <div class="field">
+      <label for="productSelect">Product:</label>
+      <select id="productSelect">
+        <option value="">-- Select product --</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="categorySelect">Category:</label>
+      <select id="categorySelect" disabled>
+        <option value="">-- Select category --</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="subcategorySelect">Subcategory:</label>
+      <select id="subcategorySelect" disabled>
+        <option value="">-- Select subcategory --</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="languageSelect">Language:</label>
+      <select id="languageSelect">
+        <option value="zh">Chinese (ZH)</option>
+        <option value="en">English (EN)</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="reply-section">
+    <h2>Reply Template</h2>
+    <textarea id="replyText" rows="10" readonly></textarea>
+    <div class="buttons">
+      <button id="copyBtn">Copy to clipboard</button>
+    </div>
+  </section>
+
+  <section class="import-section">
+    <h2>Import Personal Template File (JSON)</h2>
+    <p class="help">
+      Each agent can prepare their own <code>templates.json</code>-style file and import it here.  
+      It will be merged into the current product list (by product/category/subcategory IDs).
+    </p>
+    <input type="file" id="importFile" accept=".json" />
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
