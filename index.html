@@ -48,13 +48,18 @@
   </section>
 
   <section class="import-section">
-    <h2>Import Personal Template File (JSON)</h2>
-    <p class="help">
-      Each agent can prepare their own <code>templates.json</code>-style file and import it here.  
-      It will be merged into the current product list (by product/category/subcategory IDs).
-    </p>
+  <h2>Import Personal Template File (JSON)</h2>
+  <p class="help">
+    Each agent can prepare their own <code>templates.json</code>-style file and import it here.  
+    It will be merged into the current product list (by product/category/subcategory IDs).
+  </p>
+
+  <div class="file-input-wrapper">
+    <label for="importFile" class="file-label">Choose File</label>
+    <span id="fileName">No file chosen</span>
     <input type="file" id="importFile" accept=".json" />
-  </section>
+  </div>
+</section>
 
   <script src="main.js"></script>
 </body>
