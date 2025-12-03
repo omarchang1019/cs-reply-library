@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "id": "ins3",
+      "name": "Ins3 Story Downloader",  // 产品显示名称，可自由改
+      "categories": [
+        {
+          "id": "subscription",
+          "name": "Subscription & Payment",
+          "subcategories": [
+            {
+              "id": "vip_not_activated",
+              "name": "VIP paid but not activated",
+              "reply": {
+                "zh": "您好，我们已为您检查订单，您的付款已经成功，但系统激活可能存在延迟......",
+                "en": "Hi, we've checked your order and the payment went through successfully, but the system may need a short time to activate your VIP..."
+              }
+            },
+            {
+              "id": "cancel_refund",
+              "name": "Cancel subscription / refund",
+              "reply": {
+                "zh": "如果您是通过 Google Play / App Store 订阅的，请按照以下步骤操作取消自动续费……",
+                "en": "If you subscribed via Google Play / App Store, please follow these steps to cancel the auto-renewal..."
+              }
+            }
+          ]
+        },
+        {
+          "id": "download_issue",
+          "name": "Download Issues",
+          "subcategories": [
+            {
+              "id": "empty_link",
+              "name": "Copied link but app says it is empty",
+              "reply": {
+                "zh": "请您先在 TikTok 中点击【分享】-【复制链接】，然后再回到我们的应用……",
+                "en": "Please make sure you tap 'Share' → 'Copy link' in TikTok first, then come back to our app..."
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "tiktok_downloader",
+      "name": "TikTok Video Downloader",
+      "categories": [
+        {
+          "id": "network",
+          "name": "Network / Connection",
+          "subcategories": [
+            {
+              "id": "network_error",
+              "name": "Network error when downloading",
+              "reply": {
+                "zh": "当前网络连接不稳定，建议您切换 Wi-Fi 或 4G/5G 后重试……",
+                "en": "The current network connection is unstable. Please switch to a more stable Wi-Fi or mobile data and try again..."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
