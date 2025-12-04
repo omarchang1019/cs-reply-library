@@ -1,159 +1,51 @@
 {
-  "products": [
+  "id": "ins3",
+  "name": "Ins3",
+  "categories": [
     {
-      "id": "ins3",
-      "name": "Ins3 Story Viewer",
-      "categories": [
+      "id": "download",
+      "name": "Download",
+      "subcategories": [
         {
-          "id": "story_view",
-          "name": "Story Viewing",
-          "subcategories": [
-            {
-              "id": "seen_status",
-              "name": "Will stories show as seen?",
-              "reply": {
-                "en": "No. Stories viewed via the app will NOT appear as seen on Instagram.",
-                "zh": "不会的，通过本应用查看的限时动态不会在 Instagram 显示已查看。",
-                "es": "No. Las historias vistas en la aplicación no aparecerán como vistas en Instagram."
-              }
-            },
-            {
-              "id": "story_load_fail",
-              "name": "Story failed to load",
-              "reply": {
-                "en": "Please refresh or log in again. Some private accounts may block story fetching.",
-                "zh": "请刷新或重新登录。有些私密账号可能会限制限时动态抓取。",
-                "es": "Por favor, actualiza o inicia sesión nuevamente. Algunas cuentas privadas pueden bloquear la carga de historias."
-              }
-            }
-          ]
+          "id": "download_follow_up",
+          "name": "Follow up",
+          "reply": {
+            "en": "Dear User,\n\nThank you for reaching us, and we've received your issue report. We understand how frustrating this situation is and sincerely apologize for any inconvenience. We're ready to assist you with any download issues.\n\nFor further investigation, please send us the following details:\n1. A screenshot or screen recording of the download issue.\n2. A video link.\n\nYour cooperation will help us better understand this issue and provide an appropriate solution. We appreciate your patience and look forward to hearing from you.\n\nWarm regards,\nDevi\nUser Support Team"
+          }
         },
         {
-          "id": "login_issue",
-          "name": "Login Issues",
-          "subcategories": [
-            {
-              "id": "login_failed",
-              "name": "Cannot login",
-              "reply": {
-                "en": "Please check your Instagram credentials and try again with VPN turned off.",
-                "zh": "请检查您的 Instagram 账号密码，并关闭 VPN 后重试。",
-                "es": "Revisa tus credenciales de Instagram y prueba sin VPN."
-              }
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "tiktok_downloader",
-      "name": "TikTok Downloader",
-      "categories": [
-        {
-          "id": "download_issue",
-          "name": "Download Issues",
-          "subcategories": [
-            {
-              "id": "no_url_detected",
-              "name": "Link not detected",
-              "reply": {
-                "en": "Please copy the TikTok link from the Share menu and try again.",
-                "zh": "请从 TikTok 分享菜单中复制链接后重试。",
-                "es": "Copia el enlace desde el menú de compartir de TikTok y vuelve a intentarlo."
-              }
-            },
-            {
-              "id": "download_fail",
-              "name": "Download failed",
-              "reply": {
-                "en": "Try switching to WiFi or restarting the app.",
-                "zh": "请尝试切换到 WiFi 或重启应用。",
-                "es": "Intenta cambiar a WiFi o reiniciar la aplicación."
-              }
-            }
-          ]
+          "id": "download_follow_up_unclear",
+          "name": "Follow up unclear download issue",
+          "reply": {
+            "en": "Dear User,\n\nThank you for contacting us. We understand how frustrating this situation must be and sincerely apologize for any inconvenience it may have caused.\n\nWe’d like to understand the issue better so we can address your concerns and continue improving the app.\n\nCan you elaborate on your issue? Any additional details such as screenshots that you can provide would be helpful.\n\nWe look forward to assisting you! 😊\n\nWarm regards,\nDevi\nUser Support Team"
+          }
         },
         {
-          "id": "vip",
-          "name": "Subscription / VIP",
-          "subcategories": [
-            {
-              "id": "vip_not_active",
-              "name": "VIP not activated",
-              "reply": {
-                "en": "Your payment was received. Restart the app to update your VIP status.",
-                "zh": "您的付款已成功，请重启应用以更新 VIP 状态。",
-                "es": "El pago fue recibido. Reinicia la app para activar tu VIP."
-              }
-            }
-          ]
+          "id": "download_follow_up_troubleshoot",
+          "name": "Follow up with troubleshoot",
+          "reply": {
+            "en": "Dear User,\n\nThank you for reaching out to us. We’ve received your issue report and understand how frustrating this situation can be. We sincerely apologize for any inconvenience and are ready to assist you with any download issues.\n\nPlease try the following troubleshooting steps:\n1. Clear the app cache: Go to your device settings, find the Insaver app, and clear the cache. This can update the app and improve its performance.\n2. Restart the app.\n3. Relaunch the app, and try downloading again.\n\nIf the issue persists after following these steps, please send us:\n1. A screenshot or screen recording of the download issue.\n2. The video link you’re trying to download.\n\nYour cooperation will help us better understand the problem and provide an appropriate solution. We appreciate your patience and look forward to hearing from you.\n\nWarm regards,\nDevi\nUser Support Team"
+          }
         }
       ]
     },
-
     {
-      "id": "reels_saver",
-      "name": "Instagram Reels Saver",
-      "categories": [
+      "id": "subscription",
+      "name": "Subscription",
+      "subcategories": [
         {
-          "id": "reels_issue",
-          "name": "Reels Download",
-          "subcategories": [
-            {
-              "id": "private_account",
-              "name": "Cannot download from private account",
-              "reply": {
-                "en": "Reels from private accounts are not supported.",
-                "zh": "暂不支持下载私密账号的 Reels 内容。",
-                "es": "No es posible descargar Reels de cuentas privadas."
-              }
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "yt_downloader",
-      "name": "YouTube Video Downloader",
-      "categories": [
+          "id": "cancel_subscription",
+          "name": "Cancel subscription",
+          "reply": {
+            "en": "Dear VIP User,\n\nThank you for contacting us. We are sorry that you want to cancel your subscription, but we respect your decision.\n\nYou can follow these steps to cancel your subscription on Google Play:\n1. Open the Google Play Store and go to Subscriptions.\n2. Select the subscription you want to cancel.\n3. Tap \"Cancel subscription\".\n4. Follow the instructions.\n\nPlease note that deleting and uninstalling the app will not help you cancel your subscription.\n\nIf you have a moment, we would greatly appreciate it if you could tell us the reason for your decision to cancel your subscription. Your feedback helps us understand how we can continue improving our product and services.\n\nPlease feel free to contact us if you need further assistance. We will be happy to assist you!\n\nWarm regards,\nDevi\nUser Support Team"
+          }
+        },
         {
-          "id": "resolution_issue",
-          "name": "Resolution Problems",
-          "subcategories": [
-            {
-              "id": "1080p_missing",
-              "name": "1080p not available",
-              "reply": {
-                "en": "Some YouTube videos do not include a 1080p stream.",
-                "zh": "部分 YouTube 视频本身不提供 1080p 清晰度。",
-                "es": "Algunos videos de YouTube no tienen disponible 1080p."
-              }
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "ai_helper",
-      "name": "AI Helper / Assistant",
-      "categories": [
-        {
-          "id": "translation",
-          "name": "Translation",
-          "subcategories": [
-            {
-              "id": "translate_incorrect",
-              "name": "Translation incorrect",
-              "reply": {
-                "en": "Please provide a clearer source sentence for more accurate translation.",
-                "zh": "请提供更清晰的原句以获得更准确的翻译。",
-                "es": "Proporciona una oración más clara para una traducción más precisa."
-              }
-            }
-          ]
+          "id": "cancel_and_refund",
+          "name": "Cancel and refund",
+          "reply": {
+            "en": "Dear VIP User,\n\nThank you for reaching out to us. We are sorry to hear that you want to request a refund, but we respect your decision.\n\nRegarding your refund request, since the payment was made through a third party (Google Play Store), Google determines eligibility based on its refund policy. We strongly recommend visiting the following link to review Google's refund policy and submit your request:\nhttps://support.google.com/googleplay/answer/15574897?sjid=6036702517892534278-NC\n\nNext, you can follow these steps to cancel a subscription in the Google Play app to avoid being charged after the subscription ends:\n1. On your Android device, open Subscriptions in Google Play.\n2. Select the subscription you want to cancel.\n3. Tap \"Cancel subscription\".\n4. Follow the instructions.\n\nWe hope the information provided is clear. Let us know if you need any further assistance.\n\nWarm regards,\nDevi\nUser Support Team"
+          }
         }
       ]
     }
