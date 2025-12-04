@@ -3,7 +3,22 @@
     {
       "id": "demo_product",
       "name": "Demo Product",
-      "categories": [ ... ]
+      "categories": [ {
+          "id": "demo_category",
+          "name": "Demo Category",
+          "subcategories": [
+            {
+              "id": "demo_subcategory",
+              "name": "Demo Subcategory",
+              "reply": {
+                "zh": "这是一个测试话术，说明 templates.json 已经成功加载。",
+                "en": "This is a demo reply. templates.json has been loaded successfully."
+              }
+            }
+          ]
+        }
+      ]
+    }]
     },
     {
       "id": "ins3",
