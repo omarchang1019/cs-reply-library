@@ -1,26 +1,6 @@
 {
   "products": [
     {
-      "id": "demo_product",
-      "name": "Demo Product",
-      "categories": [ {
-          "id": "demo_category",
-          "name": "Demo Category",
-          "subcategories": [
-            {
-              "id": "demo_subcategory",
-              "name": "Demo Subcategory",
-              "reply": {
-                "zh": "这是一个测试话术，说明 templates.json 已经成功加载。",
-                "en": "This is a demo reply. templates.json has been loaded successfully."
-              }
-            }
-          ]
-        }
-      ]
-    }]
-    },
-    {
       "id": "ins3",
       "name": "Ins3 Story Viewer",
       "categories": [
@@ -30,10 +10,147 @@
           "subcategories": [
             {
               "id": "seen_status",
-              "name": "Will the story show as seen?",
+              "name": "Will stories show as seen?",
               "reply": {
-                "zh": "不会的，您在我们应用中查看的故事在 Instagram 中不会显示已查看。",
-                "en": "No. Stories you view in our app will NOT be marked as seen on Instagram."
+                "en": "No. Stories viewed via the app will NOT appear as seen on Instagram.",
+                "zh": "不会的，通过本应用查看的限时动态不会在 Instagram 显示已查看。",
+                "es": "No. Las historias vistas en la aplicación no aparecerán como vistas en Instagram."
+              }
+            },
+            {
+              "id": "story_load_fail",
+              "name": "Story failed to load",
+              "reply": {
+                "en": "Please refresh or log in again. Some private accounts may block story fetching.",
+                "zh": "请刷新或重新登录。有些私密账号可能会限制限时动态抓取。",
+                "es": "Por favor, actualiza o inicia sesión nuevamente. Algunas cuentas privadas pueden bloquear la carga de historias."
+              }
+            }
+          ]
+        },
+        {
+          "id": "login_issue",
+          "name": "Login Issues",
+          "subcategories": [
+            {
+              "id": "login_failed",
+              "name": "Cannot login",
+              "reply": {
+                "en": "Please check your Instagram credentials and try again with VPN turned off.",
+                "zh": "请检查您的 Instagram 账号密码，并关闭 VPN 后重试。",
+                "es": "Revisa tus credenciales de Instagram y prueba sin VPN."
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "tiktok_downloader",
+      "name": "TikTok Downloader",
+      "categories": [
+        {
+          "id": "download_issue",
+          "name": "Download Issues",
+          "subcategories": [
+            {
+              "id": "no_url_detected",
+              "name": "Link not detected",
+              "reply": {
+                "en": "Please copy the TikTok link from the Share menu and try again.",
+                "zh": "请从 TikTok 分享菜单中复制链接后重试。",
+                "es": "Copia el enlace desde el menú de compartir de TikTok y vuelve a intentarlo."
+              }
+            },
+            {
+              "id": "download_fail",
+              "name": "Download failed",
+              "reply": {
+                "en": "Try switching to WiFi or restarting the app.",
+                "zh": "请尝试切换到 WiFi 或重启应用。",
+                "es": "Intenta cambiar a WiFi o reiniciar la aplicación."
+              }
+            }
+          ]
+        },
+        {
+          "id": "vip",
+          "name": "Subscription / VIP",
+          "subcategories": [
+            {
+              "id": "vip_not_active",
+              "name": "VIP not activated",
+              "reply": {
+                "en": "Your payment was received. Restart the app to update your VIP status.",
+                "zh": "您的付款已成功，请重启应用以更新 VIP 状态。",
+                "es": "El pago fue recibido. Reinicia la app para activar tu VIP."
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "reels_saver",
+      "name": "Instagram Reels Saver",
+      "categories": [
+        {
+          "id": "reels_issue",
+          "name": "Reels Download",
+          "subcategories": [
+            {
+              "id": "private_account",
+              "name": "Cannot download from private account",
+              "reply": {
+                "en": "Reels from private accounts are not supported.",
+                "zh": "暂不支持下载私密账号的 Reels 内容。",
+                "es": "No es posible descargar Reels de cuentas privadas."
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "yt_downloader",
+      "name": "YouTube Video Downloader",
+      "categories": [
+        {
+          "id": "resolution_issue",
+          "name": "Resolution Problems",
+          "subcategories": [
+            {
+              "id": "1080p_missing",
+              "name": "1080p not available",
+              "reply": {
+                "en": "Some YouTube videos do not include a 1080p stream.",
+                "zh": "部分 YouTube 视频本身不提供 1080p 清晰度。",
+                "es": "Algunos videos de YouTube no tienen disponible 1080p."
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "ai_helper",
+      "name": "AI Helper / Assistant",
+      "categories": [
+        {
+          "id": "translation",
+          "name": "Translation",
+          "subcategories": [
+            {
+              "id": "translate_incorrect",
+              "name": "Translation incorrect",
+              "reply": {
+                "en": "Please provide a clearer source sentence for more accurate translation.",
+                "zh": "请提供更清晰的原句以获得更准确的翻译。",
+                "es": "Proporciona una oración más clara para una traducción más precisa."
               }
             }
           ]
